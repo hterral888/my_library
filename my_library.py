@@ -8,7 +8,6 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
-def pdfpkg():
   pip install pdfminer3
 
   from pdfminer3.layout import LAParams, LTTextBox
@@ -18,7 +17,7 @@ def pdfpkg():
   from pdfminer3.converter import PDFPageAggregator
   from pdfminer3.converter import TextConverter
   import io
-  return ("installed & imported")
+
           
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
