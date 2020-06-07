@@ -6,7 +6,7 @@ def get_data():
   entries = Path("/content/drive/My Drive/Wellness_Policy/Wellness_Policy")
   for entry in entries.iterdir():
     district_list.append(entry.name)
-return print(district_list, len(district_list))
+  return print(district_list, len(district_list))
 
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
