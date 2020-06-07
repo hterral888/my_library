@@ -18,7 +18,7 @@ def pdfpkg():
   from pdfminer3.converter import PDFPageAggregator
   from pdfminer3.converter import TextConverter
   import io
-  return ('installed and imported)
+  return ("installed & imported")
           
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
