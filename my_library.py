@@ -1,6 +1,7 @@
 def installs:
   !pip install pdfminer3
   !pip install spacy 
+return print('pdfminer3 and spacy installed')
   
   
 def imports:
@@ -15,6 +16,7 @@ def imports:
   !python -m spacy download en_core_web_md
   import en_core_web_md
   nlp = en_core_web_md.load()
+return print('pdfminer3 tools, io, spacy, dictionary imported')
 
 def get_data:
   from google.colab import drive
@@ -24,7 +26,7 @@ def get_data:
   entries = Path("/content/drive/My Drive/Wellness_Policy/Wellness_Policy")
   for entry in entries.iterdir():
     district_list.append(entry.name)
-  print(district_list, len(district_list))
+return print(district_list, len(district_list))
 
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
