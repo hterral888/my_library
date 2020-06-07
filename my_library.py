@@ -8,6 +8,14 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
+from pdfminer3.layout import LAParams, LTTextBox
+from pdfminer3.pdfpage import PDFPage
+from pdfminer3.pdfinterp import PDFResourceManager
+from pdfminer3.pdfinterp import PDFPageInterpreter
+from pdfminer3.converter import PDFPageAggregator
+from pdfminer3.converter import TextConverter
+import io
+
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
   fake_file_handle = io.StringIO()
