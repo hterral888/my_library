@@ -16,6 +16,15 @@ def imports:
   import en_core_web_md
   nlp = en_core_web_md.load()
 
+def get_data:
+  from google.colab import drive
+  drive.mount('/content/drive', force_remount=True)
+  from pathlib import Path
+  district_list = []
+  entries = Path("/content/drive/My Drive/Wellness_Policy/Wellness_Policy")
+  for entry in entries.iterdir():
+    district_list.append(entry.name)
+  print(district_list, len(district_list))
 
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
