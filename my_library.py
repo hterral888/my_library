@@ -1,6 +1,6 @@
 def installs():
-  !pip install pdfminer3
-  !pip install spacy 
+  pip install pdfminer3
+  pip install spacy 
 return print('pdfminer3 and spacy installed')
   
   
