@@ -8,7 +8,7 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
-pip install pdfminer3
+!pip install pdfminer3
 from pdfminer3.layout import LAParams, LTTextBox
 from pdfminer3.pdfpage import PDFPage
 from pdfminer3.pdfinterp import PDFResourceManager
