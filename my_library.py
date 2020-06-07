@@ -1,10 +1,10 @@
-def installs:
+def installs():
   !pip install pdfminer3
   !pip install spacy 
 return print('pdfminer3 and spacy installed')
   
   
-def imports:
+def imports():
   from pdfminer3.layout import LAParams, LTTextBox
   from pdfminer3.pdfpage import PDFPage
   from pdfminer3.pdfinterp import PDFResourceManager
@@ -18,7 +18,7 @@ def imports:
   nlp = en_core_web_md.load()
 return print('pdfminer3 tools, io, spacy, dictionary imported')
 
-def get_data:
+def get_data():
   from google.colab import drive
   drive.mount('/content/drive', force_remount=True)
   from pathlib import Path
