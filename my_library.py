@@ -8,6 +8,9 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
+
+          
+def process_pdf_files(list_of_file_names):
   pip install pdfminer3
 
   from pdfminer3.layout import LAParams, LTTextBox
@@ -18,8 +21,6 @@ def get_data():
   from pdfminer3.converter import TextConverter
   import io
 
-          
-def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
   fake_file_handle = io.StringIO()
   converter = TextConverter(resource_manager, fake_file_handle, laparams=LAParams())
