@@ -3,7 +3,7 @@ def get_data():
   drive.mount('/content/drive', force_remount=True)
   from pathlib import Path
   district_list = []
-  entries = Path("/content/drive/My Drive/Wellness_Policy/Wellness_Policy")
+  entries = Path("/content/drive/My Drive/Wellness Policy")
   for entry in entries.iterdir():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
