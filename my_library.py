@@ -56,13 +56,18 @@ def process_pdf_files(list_of_file_names):
   fake_file_handle.close()
   return text_dictionary
 
-#about 2.5 mins
-%%time 
+def get_dictionary():
 big_dictionary = {}
-for name in alpha_district_list:
-  small_dictionary = my.process_pdf_files([name])  #do one name at a time
-  big_dictionary[name] = small_dictionary[name]
-  print(list(big_dictionary.keys()))  #should see this grow
+from pathlib import Path
+district_list = []
+entries = Path("/content/drive/My Drive/LWP")
+for entry in entries.iterdir():
+  district_list.append(entry.name)
+alpha_district_list = sorted(district_list)
+  for name in alpha_district_list:
+    small_dictionary = my.process_pdf_files([name])  #do one name at a time
+    big_dictionary[name] = small_dictionary[name]
+   return print(list(big_dictionary.keys()))  #should see this grow
 
 
 
