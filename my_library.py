@@ -26,7 +26,7 @@ def get_list():
         district_list.append(entry.name)
     print(len(district_list), district_list)
     alpha_district_list = sorted(district_list)
-    return print(alpha_district_list)
+    return alpha_district_list
 
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
