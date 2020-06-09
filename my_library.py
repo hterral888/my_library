@@ -63,12 +63,6 @@ def get_dictionary():
     big_dictionary[name] = small_dictionary[name]
   return print(list(big_dictionary.keys()))  #should see this grow
 
-def nlpimports():
-  import spacy 
-  !python -m spacy download en_core_web_md
-  import en_core_web_md
-  nlp = en_core_web_md.load()
-
 def addv(x:list, y:list) -> list:
   assert isinstance(x, list), f"x must be a list but instead is {type(x)}"
   assert isinstance(y, list), f"y must be a list but instead is {type(y)}"
