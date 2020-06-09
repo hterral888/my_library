@@ -18,14 +18,15 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
-from pathlib import Path
-district_list = []
-entries = Path("/content/drive/My Drive/LWP")
-for entry in entries.iterdir():
-    district_list.append(entry.name)
-print(len(district_list), district_list)
-alpha_district_list = sorted(district_list)
-print(alpha_district_list)
+def get_list():
+  from pathlib import Path
+    district_list = []
+    entries = Path("/content/drive/My Drive/LWP")
+    for entry in entries.iterdir():
+        district_list.append(entry.name)
+    print(len(district_list), district_list)
+    alpha_district_list = sorted(district_list)
+    return print(alpha_district_list)
 
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
