@@ -138,3 +138,17 @@ def knn(target_vector:list, crowd_matrix:list,  labels:list, k:int, sim_type='eu
   #Return winner
   return winner
 
+def update_tweet_row(word_table, word:str):
+  assert isinstance(author, int), f'Expecting int in author but saw {type(author)}.'
+  value_list = [[1,0], [0,1]]
+  word_list = word_table['word'].tolist()
+  real_word = word if type(word) == str else word.text
+
+  if real_word in word_list:
+    j = word_list.index(real_word)
+    word_table.loc[j, author] += 1
+  else:
+    #not seen yet
+    row = [real_word] + value_list[author]
+    word_table.loc[len(word_table)] = row
+  return word_table
