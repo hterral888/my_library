@@ -18,16 +18,6 @@ def get_data():
     district_list.append(entry.name)
   return print(district_list, len(district_list))
 
-def get_list():
-  from pathlib import Path
-    district_list = []
-    entries = Path("/content/drive/My Drive/LWP")
-    for entry in entries.iterdir():
-        district_list.append(entry.name)
-    print(len(district_list), district_list)
-    alpha_district_list = sorted(district_list)
-    return alpha_district_list
-
 def process_pdf_files(list_of_file_names):
   resource_manager = PDFResourceManager()
   fake_file_handle = io.StringIO()
@@ -55,20 +45,6 @@ def process_pdf_files(list_of_file_names):
   converter.close()
   fake_file_handle.close()
   return text_dictionary
-
-def get_dictionary():
-big_dictionary = {}
-from pathlib import Path
-district_list = []
-entries = Path("/content/drive/My Drive/LWP")
-for entry in entries.iterdir():
-  district_list.append(entry.name)
-alpha_district_list = sorted(district_list)
-  for name in alpha_district_list:
-    small_dictionary = my.process_pdf_files([name])  #do one name at a time
-    big_dictionary[name] = small_dictionary[name]
-   return print(list(big_dictionary.keys()))  #should see this grow
-
 
 
 def addv(x:list, y:list) -> list:
