@@ -63,10 +63,10 @@ def get_dictionary():
   entries = Path("/content/drive/My Drive/LWP")
   for entry in entries.iterdir():
     district_list.append(entry.name)
-  alpha_district_list = sorted(district_list)
-      for name in alpha_district_list:
-        small_dictionary = process_pdf_files([name])  #do one name at a time
-        big_dictionary[name] = small_dictionary[name]
+    alpha_district_list = sorted(district_list)
+    for name in alpha_district_list:
+      small_dictionary = process_pdf_files([name])  #do one name at a time
+      big_dictionary[name] = small_dictionary[name]
   return print(list(big_dictionary.keys()))  #should see this grow
 
 def addv(x:list, y:list) -> list:
