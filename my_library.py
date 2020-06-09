@@ -59,7 +59,7 @@ def process_pdf_files(list_of_file_names):
 #about 2.5 mins
 %%time 
 big_dictionary = {}
-for name in my.alpha_district_list:
+for name in alpha_district_list:
   small_dictionary = my.process_pdf_files([name])  #do one name at a time
   big_dictionary[name] = small_dictionary[name]
   print(list(big_dictionary.keys()))  #should see this grow
