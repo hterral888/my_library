@@ -95,7 +95,6 @@ def meanv(matrix: list) -> list:
     return mean
 
 def wordcounts(s:str): #definining function
-  nlp = en_core_web_md.load()
   scores = [] #creating new list
   doc = nlp(s.lower())
   for token in doc: #for every item in list
