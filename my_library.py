@@ -19,6 +19,13 @@ def get_data():
   return print(district_list, len(district_list))
 
 def process_pdf_files(list_of_file_names):
+   from pdfminer3.layout import LAParams, LTTextBox
+  from pdfminer3.pdfpage import PDFPage
+  from pdfminer3.pdfinterp import PDFResourceManager
+  from pdfminer3.pdfinterp import PDFPageInterpreter
+  from pdfminer3.converter import PDFPageAggregator
+  from pdfminer3.converter import TextConverter
+  import io
   resource_manager = PDFResourceManager()
   fake_file_handle = io.StringIO()
   converter = TextConverter(resource_manager, fake_file_handle, laparams=LAParams())
